@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alma e-shop</title>
+    <link rel="stylesheet" href="vendor/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/af82e43500.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">E-shop</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse pt-1" id="navbarNavDropdown">
+                    <ul class="navbar-nav top-menu ">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Каталог</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Новости</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalCart"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                        <div class="modal fade" id="modalCart" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header bg-light bg-gradient text-dark">
+                                        <h5 class="modal-title" id="exampleModalLabel">Корзина</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <table class="table">
+                                            <tbody>
+                                                <tr>
+                                                    <td><a href="#"><img src="img/products/Xiaomi%20Redmi%20Note%2011.jpg"></a></td>
+                                                    <td><a href="#">Xiaomi Redmi Note 11</a></td>
+                                                    <td>$1 100</td>
+                                                    <td>1</td>
+                                                    <td><a href="#"><i class="fa-solid fa-xmark"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="#"><img src="img/products/iphone_11.jpg"></a></td>
+                                                    <td><a href="#">Apple iPhone 11 128Gb</a></td>
+                                                    <td>$999</td>
+                                                    <td>1</td>
+                                                    <td><a href="#"><i class="fa-solid fa-xmark"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="#"><img src="img/products/OPPO%20A53.jpg"></a></td>
+                                                    <td><a href="#">OPPO A53</a></td>
+                                                    <td>$799</td>
+                                                    <td>1</td>
+                                                    <td><a href="#"><i class="fa-solid fa-xmark"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                                        <button type="button" class="btn btn-success">Оформить заказ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-user"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modalLogin">Войти</a></li>
+                                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modalReg">Зарегистрироваться</a></li>
+                            </ul>
+                        </li>
+                        <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-md">
+                                <div class="modal-content">
+                                    <div class="modal-header bg-light bg-gradient text-dark">
+                                        <h5 class="modal-title" id="modalLabel">Вход</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1" class="form-label">E-mail</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleInputPassword1" class="form-label">Пароль</label>
+                                                <input type="password" class="form-control" id="exampleInputPassword1">
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                <label class="form-check-label" for="exampleCheck1">Запомнить меня</label>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Войти</button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        Ещё нет аккаунта?<a href="#" class="text-primary" data-bs-toggle="modal" data-bs-target="#modalReg">Зарегистрируйтесь</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="modalReg" tabindex="-1" aria-labelledby="modalRegLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-md">
+                                <div class="modal-content">
+                                    <div class="modal-header bg-light bg-gradient text-dark">
+                                        <h5 class="modal-title" id="modalRegLabel">Регистрация</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="inputEmail1" class="form-label">E-mail</label>
+                                                <input type="email" class="form-control" id="inputEmail1" aria-describedby="emailHelp">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="inputNickName" class="form-label">Никнейм</label>
+                                                <input type="text" class="form-control" id="inputNickName">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="inputPassword1" class="form-label">Пароль</label>
+                                                <input type="password" class="form-control" id="inputPassword1">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="inputRepeatPassword" class="form-label">Пароль ещё раз</label>
+                                                <input type="password" class="form-control" id="inputRepeatPassword">
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="regCheck1">
+                                                <label class="form-check-label" for="regCheck1">Я принимаю условия <a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%B5_%D1%81%D0%BE%D0%B3%D0%BB%D0%B0%D1%88%D0%B5%D0%BD%D0%B8%D0%B5">Пользовательского соглашения</a></label>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        Уже есть аккаунт?<a href="#" class="text-primary" data-bs-toggle="modal" data-bs-target="#modalLogin">Войдите</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid carouselProp">
+            <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <img src="img/1.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="img/2.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="img/3.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <section class="blockProduct">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="cardProduct">
+                        <div class="productImg">
+                            <a href="#"><img src="img/products/iphone_11.jpg"></a>
+                        </div>
+                        <div class="productDetails">
+                            <h4><a href="#">Apple iPhone 11</a></h4>
+                            <p>Функциональный и стильный смартфон Apple iPhone 11 в металлическом корпусе способен обеспечить не только повседневное общение и развлечения, но и продуктивную работу. Изображение на экране смартфона диагональю 6.1 дюйма обладает поразительной детализацией и цветопередачей. Олеофобное покрытие исключает сильное загрязнение экрана.</p>
+                            <div class="productBottomDetails d-flex justify-content-between">
+                                <div class="productPrice">
+                                    <small>$1199</small> $999
+                                </div>
+                                <div class="productLinks">
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="cardProduct">
+                        <div class="productImg">
+                            <a href="#"><img src="img/products/Xiaomi%20Redmi%20Note%2011.jpg"></a>
+                        </div>
+                        <div class="productDetails">
+                            <h4><a href="#">Xiaomi Redmi Note 11</a></h4>
+                            <p>Дисплей Xiaomi Redmi Note 11 с подсветкой, обеспечивает максимальную яркость, контрастность, калибровку цветов и разрешение. Наслаждайтесь любимым контентом с высокой частотой обновления дисплея Xiaomi Redmi Note 11 в 90 Гц. С комфортом просматривайте ленту в социальных сетях или наслаждайтесь онлайн играми.</p>
+                            <div class="productBottomDetails d-flex justify-content-between">
+                                <div class="productPrice">
+                                    <small>$1299</small> $1099
+                                </div>
+                                <div class="productLinks">
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="cardProduct">
+                        <div class="productImg">
+                            <a href="#"><img src="img/products/Samsung%20Galaxy%20A52.jpg"></a>
+                        </div>
+                        <div class="productDetails">
+                            <h4><a href="#">Samsung Galaxy A52</a></h4>
+                            <p>Насладитесь детальным изображением на Super AMOLED 6.5'' Infinity-O экране с разрешением FHD+ и яркостью до 800 нит, которое отлично видно даже при ярком дневном свете. Функция защиты глаз "Eye Comfort Shield" снижает уровень синего свечения, а сверхплавная прокрутка обеспечивает комфортный просмотр во время игрового сеанса или скроллинга изображения на экране.</p>
+                            <div class="productBottomDetails d-flex justify-content-between">
+                                <div class="productPrice">
+                                    <small>$1599</small> $1299
+                                </div>
+                                <div class="productLinks">
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="cardProduct">
+                        <div class="productImg">
+                            <a href="#"><img src="img/products/Apple%20iPhone%2012.jpg"></a>
+                        </div>
+                        <div class="productDetails">
+                            <h4><a href="#">Apple iPhone 12</a></h4>
+                            <p>Невероятно прочная передняя панель Ceramic Shield. Великолепный яркий дисплей OLED. Мощный чип. И система двух камер. Всё это есть в Apple iPhone 12.</p>
+                            <div class="productBottomDetails d-flex justify-content-between">
+                                <div class="productPrice">
+                                    <small>$1899</small> $1499
+                                </div>
+                                <div class="productLinks">
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="cardProduct">
+                        <div class="productImg">
+                            <a href="#"><img src="img/products/OPPO%20A53.jpg"></a>
+                        </div>
+                        <div class="productDetails">
+                            <h4><a href="#">OPPO A53</a></h4>
+                            <p>Легкий и чрезвычайно тонкий корпус OPPO A53 разработан так, чтобы с ним было удобно обращаться одной рукой. Смотрите видео, играйте в видеоигры и просматривайте популярный контент в социальных сетях на удобном и комфортном для глаз дисплее с частотой обновления 90 Гц.</p>
+                            <div class="productBottomDetails d-flex justify-content-between">
+                                <div class="productPrice">
+                                    <small>$999</small> $799
+                                </div>
+                                <div class="productLinks">
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <div class="cardProduct">
+                        <div class="productImg">
+                            <a href="#"><img src="img/products/samsung-galaxy-z-fold-3-12-512gb-serebristyj-102057624-1-Container.jpg"></a>
+                        </div>
+                        <div class="productDetails">
+                            <h4><a href="#">Samsung Galaxy Z Fold 3</a></h4>
+                            <p>Самый тонкий и компактный Galaxy Fold с большими экранами внутри и снаружи. В сложенном виде это 6,2-дюймовый смартфон премиум-класса, который который удобно держать одной рукой.<sup>3</sup> В разложенном виде вы получаете широкий обзор, открывающий новые возможности.</p>
+                            <div class="productBottomDetails d-flex justify-content-between">
+                                <div class="productPrice">
+                                    <small>$2299</small> $1999
+                                </div>
+                                <div class="productLinks">
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <section class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-6">
+                        <h4>Информация</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Главная</a></li>
+                            <li><a href="#">О магазине</a></li>
+                            <li><a href="#">Оплата и доставка</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3 col-6">
+                        <h4>Время работы</h4>
+                        <ul class="list-unstyled">
+                            <li>г. Алматы, ул. Абая</li>
+                            <li>пн-вс: 8:00 - 18:00</li>
+                            <li>без перерыва</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3 col-6">
+                        <h4>Контакты</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="tel:+77577730379">+7 757 773 03 79</a></li>
+                            <li><a href="tel:+77577730573">+7 757 773 05 73</a></li>
+                            <li><a href="tel:+77577732789">+7 757 773 27 89</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3 col-6">
+                        <h4>Мы в сети</h4>
+                        <div class="footerIcons">
+                            <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <script src="vendor/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/af82e43500.js" crossorigin="anonymous"></script>
+</body>
+</html>
